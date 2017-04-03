@@ -1,0 +1,132 @@
+
+	import java.util.regex.Matcher;
+	import java.util.regex.Pattern;
+public class Addresses {
+	private String name;
+	private String email;
+	private String zipcode;
+	private String city;
+	private String state;
+	
+	private String phone;
+	/*
+public addresses(String names, String emails, String zipcodes, String cities, String states, int phones)
+
+	
+	this.name =names;
+	this.email = emails;
+	this.zipcode = zipcodes;
+	this.city = cities;
+	this.state = states;
+	this.phone = phones;
+
+	*/
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+	
+		try{
+			if(	this.isEmailValid(email)){
+		
+			this.email = email;
+			}
+		}
+		
+		catch(Exception e){
+			
+			System.out.println("Please enter valid email");
+			
+		}
+	}
+
+	public String getZipcode() {
+		return zipcode;
+	}
+
+	public void setZipcode(String zipcode) {
+		this.zipcode = zipcode;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+	
+		try{
+			
+			if(this.isPhoneNumberValid(phone)){
+				
+				this.phone = phone;
+			};
+		}
+		
+		catch(Exception e){
+			
+			System.out.println("Please enter valid phone number");
+			
+		}
+	}
+	
+	
+	private boolean isEmailValid(String email){  
+	        boolean isValid = false;  
+
+	        String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";  
+	        CharSequence inputStr = email;  
+	        //Make the comparison case-insensitive.  
+	        Pattern pattern = Pattern.compile(expression,Pattern.CASE_INSENSITIVE);  
+	        Matcher matcher = pattern.matcher(inputStr);  
+	        if(matcher.matches()){  
+	            isValid = true;  
+	        }  
+	        return isValid;  
+	    } 
+	    
+	    private boolean isPhoneNumberValid(String phoneNumber){  
+	        boolean isValid = false;  
+
+	        String expression = "^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{4})$";  
+	        CharSequence inputStr = phoneNumber;  
+	        Pattern pattern = Pattern.compile(expression);  
+	        Matcher matcher = pattern.matcher(inputStr);  
+	        if(matcher.matches()){  
+	            isValid = true;  
+	        }  
+	        return isValid;  
+	    }  
+public String useraddress(){
+	
+	return "name:" + this.getName() + "\n" + "Email:" + this.getEmail()+ "\n" + "Phone:" + this.getPhone() + "\n" + "ZipCode:" + this.getZipcode() + "\n" + "City:" + this.getCity() + "\n" + "State:" + this.getState();
+			
+	
+	
+}
+}

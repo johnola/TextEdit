@@ -1,0 +1,38 @@
+import java.util.*;
+public class Education {
+	private String person;
+	ArrayList<String> list = new ArrayList<String>();
+public Education(String persons){
+	this.person = persons;
+	
+	
+}
+public void setPerson(String persons){
+	
+	this.person = persons;
+	
+}
+public String getPerson(){
+	
+	return this.person;
+	
+}
+
+public void lists(){
+	
+	list.add("sch1");
+	list.add("sch2");
+	list.add("sch3");
+	list.add("sch4");
+	list.add("sch5");
+	list.add("sch6");
+	list.add("sch7");
+	list.add("sch8");
+	list.add("sch9");
+	list.add("sch10");
+	
+	System.out.println(list);
+}
+
+
+}

@@ -1,0 +1,21 @@
+
+public class Person extends Education{
+private String name;
+private String person;
+	public Person (String persons, String names){
+		
+		super(persons);
+		this.name=names;
+	}
+	
+	public void setPerson(String personss){
+		
+		this.person = personss;
+		
+	}
+	public String getPerson(){
+		
+		return this.person;
+		
+	}
+}

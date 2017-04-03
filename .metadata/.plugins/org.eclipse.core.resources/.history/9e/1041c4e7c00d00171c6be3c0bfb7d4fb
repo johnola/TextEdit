@@ -1,0 +1,19 @@
+
+public class Calender {
+
+	public static void main(String[] args) {
+		int count =6;
+		// TODO Auto-generated method stub
+		for(int i =0; i<=count; i++){
+			
+			System.out.printf("count", i);
+			for(int j=0; j<=7; j++){
+				
+				System.out.printf("count", j);
+				
+			}
+		}
+
+	}
+
+}

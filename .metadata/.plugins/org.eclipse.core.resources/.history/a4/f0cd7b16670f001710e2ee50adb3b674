@@ -1,0 +1,53 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Spellchecks {
+
+	public static void main(String[] args) throws IOException{
+		
+		String filename= (System.getProperty("user.dir") + File.separatorChar + "\\src\\" +"checkspell.txt"); 
+
+
+
+File file = new File(filename);
+try {
+    Scanner sc = new Scanner(file);
+    sc.useDelimiter("\\t\\n");
+    while (sc.hasNextLine()) {
+        String i = sc.nextLine();
+        //System.out.println(i);
+    
+   System.out.println("enter a word or sentence");
+    Scanner spells = new Scanner(System.in);
+  spells.useDelimiter("\\t");
+   while (spells.hasNextLine()) {
+      String j = spells.nextLine();
+    
+   if (i.contains(j)){
+    	
+    	System.out.printf("%s exists in the dictionary", j);
+    	
+    	
+    }
+    
+   else{
+    	
+   	System.out.printf("%s does not exists", j);
+    	
+   }
+   }
+    }
+    sc.close();
+} 
+catch (FileNotFoundException e) {
+    e.printStackTrace();
+}
+
+
+
+}
+
+
+}

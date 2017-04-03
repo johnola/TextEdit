@@ -1,0 +1,25 @@
+import java.util.Scanner;
+ 
+class Main {
+  public static void main(String[] args) {
+ 
+	  int a=1, b=1,result;
+ try{
+while(a !=0 && b!=0){
+  Scanner input = new Scanner(System.in);
+  System.out.println("Input two integers");
+ 
+  a = input.nextInt();
+  b = input.nextInt();
+ 
+  result = a / b;
+
+  System.out.println("Result = " + result);
+  }
+ }
+ catch (Exception e)
+	{
+	    System.out.println("Something else went wrong");
+	}
+
+}}

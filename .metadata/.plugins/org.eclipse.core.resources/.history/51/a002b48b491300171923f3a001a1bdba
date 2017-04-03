@@ -1,0 +1,27 @@
+import java.util.Scanner;
+ 
+class Main {
+  public static void main(String[] args) {
+	  double a =1.0,b=1.0,result;
+	  //try{
+	 
+	
+ Scanner input = new Scanner(System.in);
+while(a !=0 &&  b!=0){
+ 
+  System.out.println("Input two numbers");
+ 
+  a = input.nextDouble();
+  b = input.nextDouble();
+
+  result = a / 0.0;
+
+  System.out.println("Result = " + result);
+	  }
+	 // }
+// catch (Exception e)
+	//{
+	//    System.out.println("input numbers other than 0");
+	//}
+
+}}
